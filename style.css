@@ -44,7 +44,7 @@ h5 {
 
 @media (max-width: 480px) { 
     .title {
-      font-size: 4	em;
+      font-size: 4em;
       display: block;
       text-align: center;
     }
