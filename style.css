@@ -15,10 +15,12 @@
 
 #heading {
 	font-size: 2em;
+	text-align: center;
 }
 
 .content {
 	margin-top: 2%;
+	text-align: center;
 }
 
 .social {
@@ -27,12 +29,14 @@
 
 @media (max-width: 480px) { 
     .title {
-      font-size: 4em;
+      font-size: 4	em;
       display: block;
+      text-align: center;
     }
 
    	#heading {
    		font-size: 1.5em;
       	display: block;
+      	text-align: center;
     }
 }
