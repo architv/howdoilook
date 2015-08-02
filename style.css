@@ -20,3 +20,15 @@
 .content {
 	margin-top: 2%;
 }
+
+@media (max-width: 480px) { 
+    .title {
+      font-size: 3em;
+      display: block;
+    }
+
+   	#heading {
+   		font-size: 1em;
+      	display: block;
+    }
+}
