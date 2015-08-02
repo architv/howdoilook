@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>How Do I Look!</title>
 	<link rel="stylesheet" type="text/css" href="animate.css">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='http://fonts.googleapis.com/css?family=Carter+One' rel='stylesheet' type='text/css'>
-	<!-- <link href='http://fonts.googleapis.com/css?family=Rubik:500' rel='stylesheet' type='text/css'> -->
-	<!-- <link rel="stylesheet" type="text/css" href="pleasewait.css"> -->
-	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'> -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="tabletop.js"></script>
-	<script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	
 </head>
 <body>
-	<div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=277406192424036";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
 	<div class="header col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-4">
 		<h3 id="heading">How Do I Look?..</h3>
 	</div>
@@ -30,7 +18,7 @@
 		<h1 id="comment" class="title">Click (or tap) to know how to respond</h1>
 	</div>
 	<div class="content col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-3">
-		<h4 id="credits"></h4>
+		<h5 id="credits"></h4>
 	</div>	
 	<div class="social col-xs-8 col-xs-offset-2 col-md-4 col-md-offset-5">
 		<p>
@@ -45,53 +33,17 @@
 			    }
 			</script>
 			<a style="margin-left:2%" href="javascript:fbShare('http://architv.me/howdoilook', 'Fb Share', 'Facebook share popup', 'http://goo.gl/dS52U', 520, 350)">Share on Facebook</a>
-			<iframe style="margin-left:2%" src="https://ghbtns.com/github-btn.html?user=architv&repo=howdoilook&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px"></iframe>
+			<iframe style="margin-left:2%" src="https://ghbtns.com/github-btn.html?user=architv&repo=howdoilook&type=star&count=true" frameborder="0" scrolling="0" width="170px" height="20px">
+			</iframe>
 		</p>
-
+	</div>
+	<div class="meta col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2">
+		<h5>Created by <a href="http://architv.me">Archit Verma</a></h5><br>
+		<h5>Design inspired by: <a href="http://greatfuckingstartupadvice.com/" target="_blank">GFSA</a>. Built with <a href="https://github.com/jsoma/tabletop">Tabletop.js</a>, <a href="https://daneden.github.io/animate.css/">Animate.css</a>, and <a href="https://github.com/mattbryson/TouchSwipe-Jquery-Plugin">Touch Swipe</a>.</h5>
+	</div>
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript" src="tabletop.js"></script>
+<script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+<script type="text/javascript" src="index.js"></script>
 </body>
-<script type="text/javascript">
-	window.onload = function() { init() };
-
-	var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1j8-PvfpixsB2URW8PcvornQbRzIA4YMNu2GxEwvag7M/pubhtml';
-
-	function init() {
-	commentData = Tabletop.init({ key: public_spreadsheet_url, callback:function(data) {console.log(data)}, simpleSheet: true })
-	}
-
-	$(function() {      
-      $(".wrapper").swipe( {
-        //Generic swipe handler for all directions
-        tap:function(event, target) {
-          // $(this).text("You swiped " + direction ); 
-			var index = Math.floor(Math.random() * (commentData.data().length));
-			clickAdvice(index);
-        }
-      });
-    });
-
-	function showInfo(data, tabletop) {
-		// alert("Successfully processed!")
-		comment_data = data;
-		var comment = document.getElementById("comment");
-		var index = Math.floor(Math.random() * (data.length));
-		comment.innerText = data[index]["Comment"];
-		comment.className = comment.className + " animated bounce title";
-		console.log(data);
-	}
-
-	function clickAdvice(index) {
-	    // console.log(randNum);
-	    $("#comment").removeClass().html(commentData.data()[index].Comment).addClass('animated flipInX title').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-	      $(this).removeClass().addClass('title');
-	    });
-	    if (commentData.data()[index].Author != "") {
-	    	$("#credits").html("Suggested by " + commentData.data()[index].Author).addClass('animated fadeIn credit').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-	     		$(this).removeClass().addClass('credit');
-	    	});
-	    } else {
-	    	$("#credits").html("");
-	    }
-	    console.log("inside clickAdvice");
-	} 
-</script>
 </html>

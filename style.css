@@ -1,3 +1,6 @@
+body {
+	font-family: 'Roboto', sans-serif;font-family: 
+}
 .title {
 	font-size: 6em;
 	color: #A020F0;
@@ -7,6 +10,7 @@
 
 .wrapper{
 	margin-top: 3%;
+	text-align: center;
 }
 
 .header {
@@ -25,6 +29,17 @@
 
 .social {
 	margin-top: 5%;
+	text-align: center;
+}
+
+.meta {
+	margin-top: 5%;
+	text-align: center;
+}
+
+h5 {
+	margin-top: 0px !important;
+	margin-bottom: 5px !important;
 }
 
 @media (max-width: 480px) { 
