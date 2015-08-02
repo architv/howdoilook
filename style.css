@@ -1,11 +1,22 @@
 .title {
-	font-size: -webkit-xxx-large;
+	font-size: 6em;
 	color: #A020F0;
 	font-family: 'Carter One', cursive;
 	text-align: center;
  }
 
 .wrapper{
+	margin-top: 3%;
+}
+
+.header {
 	margin-top: 10%;
 }
- 
+
+#heading {
+	font-size: 2em;
+}
+
+.content {
+	margin-top: 2%;
+}
