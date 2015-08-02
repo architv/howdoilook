@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>How Do I Look!</title>
+	<link rel="stylesheet" type="text/css" href="animate.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Carter+One' rel='stylesheet' type='text/css'>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Rubik:500' rel='stylesheet' type='text/css'> -->
+	<!-- <link rel="stylesheet" type="text/css" href="pleasewait.css"> -->
+	<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'> -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="tabletop.js"></script>
+	<script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+</head>
+<body>
+	<div class="header">
+		<h3>How Do I Look?</h3>
+	</div>
+	<div class="wrapper">
+		<h1 id="comment" class="title">Click (or tap) to know how to respond</h1>
+	</div>
+	<div class="content">
+	</div>
+</body>
+<script type="text/javascript">
+	window.onload = function() { init() };
+
+	var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1j8-PvfpixsB2URW8PcvornQbRzIA4YMNu2GxEwvag7M/pubhtml';
+
+	function init() {
+	commentData = Tabletop.init({ key: public_spreadsheet_url, callback:function(data) {console.log(data)}, simpleSheet: true })
+	}
+
+	$(function() {      
+      $(".wrapper").swipe( {
+        //Generic swipe handler for all directions
+        tap:function(event, target) {
+          // $(this).text("You swiped " + direction ); 
+			var index = Math.floor(Math.random() * (commentData.data().length));
+			clickAdvice(index);
+        }
+   //      swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+   //        // $(this).text("You swiped " + direction ); 
+   //        	var comment = document.getElementById("comment");
+			// comment.className = comment.className + " animated bounce title";
+			// var index = Math.floor(Math.random() * (comment_data.length));
+			// comment.innerText = comment_data[index]["Comment"];
+			// // console.log(data); 
+   //        	console.log("You swiped " + direction);
+   //      }
+      });
+    });
+
+	function showInfo(data, tabletop) {
+		// alert("Successfully processed!")
+		comment_data = data;
+		var comment = document.getElementById("comment");
+		var index = Math.floor(Math.random() * (data.length));
+		comment.innerText = data[index]["Comment"];
+		comment.className = comment.className + " animated bounce title";
+		console.log(data);
+	}
+
+	function clickAdvice(index) {
+	    // console.log(randNum);
+	    $("#comment").removeClass().html(commentData.data()[index].Comment).addClass('animated flipInX title').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+	      $(this).removeClass().addClass('title');
+	    });
+	    console.log("inside clickAdvice");
+	} 
+</script>
+</html>

@@ -1,0 +1,18 @@
+.title {
+	font-size: -webkit-xxx-large;
+	color: #A020F0;
+	font-family: 'Carter One', cursive;
+	text-align: center;
+	/*font-family: 'Rubik', sans-serif;*/
+	/*font-family: 'Open Sans Condensed', sans-serif;*/
+ }
+
+.wrapper{
+	width: 60%;
+	height: 60%;
+	margin-right: 20%;
+	margin-left: 20%;
+	/*margin-top: 20%;*/
+	margin: 5% auto;
+} 
+ 
