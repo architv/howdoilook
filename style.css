@@ -21,6 +21,10 @@
 	margin-top: 2%;
 }
 
+.social {
+	margin-top: 5%;
+}
+
 @media (max-width: 480px) { 
     .title {
       font-size: 3em;
@@ -28,7 +32,7 @@
     }
 
    	#heading {
-   		font-size: 1em;
+   		font-size: 1.5em;
       	display: block;
     }
 }
