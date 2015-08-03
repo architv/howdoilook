@@ -37,6 +37,22 @@ body {
 	text-align: center;
 }
 
+.typeform-share {
+	margin-left: 10%;
+}
+
+.footer {
+	text-align: center;
+	font-size: 1.5em;
+	position:fixed;
+	float: right;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    height:50px;
+    margin-bottom:0px;
+}
+
 h5 {
 	margin-top: 0px !important;
 	margin-bottom: 5px !important;
@@ -54,4 +70,11 @@ h5 {
       	display: block;
       	text-align: center;
     }
+
+    .footer {
+		text-align: center;
+		font-size: 1em;
+		margin-top: 5%;
+	}
+
 }
