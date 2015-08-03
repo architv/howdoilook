@@ -76,7 +76,8 @@ h5 {
 		font-size: 1em;
 		margin-top: 5%;
 		/*display: table;*/
-		clear: both;
+		position: relative;
+		/*clear: both;*/
 	}
 
 }
