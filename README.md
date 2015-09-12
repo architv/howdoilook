@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="http://i.giphy.com/qeMbj4CjaRgf6.gif" width="500px" />
+  <img src="http://i.giphy.com/qeMbj4CjaRgf6.gif" width="700px" />
 </p>
 
 How Do I Look?
