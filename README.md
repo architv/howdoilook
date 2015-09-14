@@ -5,6 +5,8 @@
 How Do I Look?
 =====
 
+[How do I look](http://architv.me/howdoilook/)
+
 How Do I Look is non-serious attempt at solving the problem every guy faces. It's a random generator for responses to the "How do I look?" question women ask, so that we have more options than "Nice!", "Pretty!" and "Beautiful!".
 
 ![](http://i.imgur.com/HbHgNmN.png)
